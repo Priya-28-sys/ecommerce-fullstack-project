@@ -1,16 +1,5 @@
-# Python
-backend/env/
+backend/env
 __pycache__/
 *.pyc
-
-# Database
 db.sqlite3
-
-# Node Modules
-frontend/node_modules/
-
-# Build files
-frontend/build/
-
-# Environment variables
-.env
+node_modules/

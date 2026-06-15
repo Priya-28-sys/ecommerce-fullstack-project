@@ -15,7 +15,7 @@ function Home({ addToCart }) {
   useEffect(() => {
 
     axios
-      .get("http://127.0.0.1:8000/api/products/")
+      .get("https://ecommerce-backend-olc1.onrender.com/api/products/")
       .then((response) => {
 
         setProducts(response.data);

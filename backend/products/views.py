@@ -11,25 +11,9 @@ class ProductListView(generics.ListAPIView):
 
     serializer_class = ProductSerializer
 
-    def get_serializer_context(self):
-
-        return {
-
-            'request': self.request
-
-        }
-
 
 class ProductDetailView(generics.RetrieveAPIView):
 
     queryset = Product.objects.all()
 
     serializer_class = ProductSerializer
-
-    def get_serializer_context(self):
-
-        return {
-
-            'request': self.request
-
-        }

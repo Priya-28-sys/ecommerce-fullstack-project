@@ -7,9 +7,19 @@ function ProductCard({ product, addToCart }) {
     <div className="product-card">
 
       <img
-        src={product.image}
-        alt={product.name}
-      />
+
+  src={product.image}
+
+  alt={product.name}
+
+  onError={(e) => {
+
+    e.target.src =
+      "https://via.placeholder.com/300x220?text=No+Image";
+
+  }}
+
+/>
 
       <Link to={`/product/${product.id}`}>
 

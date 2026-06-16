@@ -9,6 +9,8 @@ import "../styles/Home.css";
 function Home({ addToCart }) {
 
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const [search, setSearch] = useState("");
 
@@ -19,15 +21,25 @@ function Home({ addToCart }) {
       .then((response) => {
 
         setProducts(response.data);
+        setLoading(false);
 
       })
       .catch((error) => {
 
         console.log(error);
-
+        setError("Failed to fetch products");
+        setLoading(false);
       });
 
   }, []);
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="error">{error}</div>;
+  }
 
   return (
 

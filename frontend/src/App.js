@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -179,7 +180,7 @@ useEffect(() => {
         />
 
       </Routes>
-      
+      <Footer />
 
     </BrowserRouter>
     </div>
@@ -188,3 +189,4 @@ useEffect(() => {
 }
 
 export default App;
+
